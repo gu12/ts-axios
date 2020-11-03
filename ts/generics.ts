@@ -23,3 +23,15 @@ function ea<T extends len>(arg:T):T{
 const str = ea('s')
 const obj = ea({length:2})
 const arr3 = ea([1])
+
+class pop<T> {
+    private data = []
+    push(item: T){
+        return this.data.push(item)
+    }
+    pop(): T{
+        return this.data.shift()
+    }
+}
+const queue = new pop<string>()
+queue.push(1)
